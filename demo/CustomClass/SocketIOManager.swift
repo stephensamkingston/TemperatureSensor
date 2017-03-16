@@ -42,16 +42,16 @@ class SocketIOManager: NSObject {
     
    
     
-    fileprivate func listenForOtherMessages() {
-        socket.on("userConnectUpdate") { (dataArray, socketAck) -> Void in
+      func listenForOtherMessages() {
+        socket.on("Init") { (dataArray, socketAck) -> Void in
             NotificationCenter.default.post(name: Notification.Name(rawValue: "userWasConnectedNotification"), object: dataArray[0] as! [String: AnyObject])
         }
         
-        socket.on("userExitUpdate") { (dataArray, socketAck) -> Void in
+        socket.on("Update") { (dataArray, socketAck) -> Void in
             NotificationCenter.default.post(name: Notification.Name(rawValue: "userWasDisconnectedNotification"), object: dataArray[0] as! String)
         }
         
-        socket.on("userTypingUpdate") { (dataArray, socketAck) -> Void in
+        socket.on("delete") { (dataArray, socketAck) -> Void in
             NotificationCenter.default.post(name: Notification.Name(rawValue: "userTypingNotification"), object: dataArray[0] as? [String: AnyObject])
         }
     }

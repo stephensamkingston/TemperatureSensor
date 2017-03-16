@@ -46,11 +46,9 @@ internal var popOver:MoreOptionsTableViewController?
         // set up the popover presentation controller
         popOver?.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.any
         if let pop = popOver?.popoverPresentationController {
-             pop.delegate = self
+        pop.delegate = self
         }
-       
         popOver?.popoverPresentationController?.sourceView = sender as? UIView // button
-        
         popOver?.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
         self.present(popOver!, animated: true, completion:nil)
     }
@@ -64,6 +62,18 @@ internal var popOver:MoreOptionsTableViewController?
 extension TemperatureViewController:TempStatus{
     func selectedOptions(temperature:Temperature){
          popOver?.popoverPresentationController?.presentingViewController.dismiss(animated: true, completion:nil)
+        SocketIOManager.sharedInstance.socket.emit("subscribe", temperature.temperature!);
+        
+//            SocketIOManager.sharedInstance.socket.on("init") { (dataArray, socketAck) -> Void in
+//                print("fudgeInit:",dataArray)
+//            }
+//           SocketIOManager.sharedInstance.socket.on("update") { (dataArray, socketAck) -> Void in
+//            print("fudgeUpdate:",dataArray)
+//            }
+//           SocketIOManager.sharedInstance.socket.on("delete") { (dataArray, socketAck) -> Void in
+//            print("fudgeDelete:",dataArray)
+//          }
+
     }
 }
 
