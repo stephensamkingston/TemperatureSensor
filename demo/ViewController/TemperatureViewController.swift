@@ -64,15 +64,10 @@ extension TemperatureViewController:TempStatus{
          popOver?.popoverPresentationController?.presentingViewController.dismiss(animated: true, completion:nil)
         SocketIOManager.sharedInstance.socket.emit("subscribe", temperature.temperature!);
         
-//            SocketIOManager.sharedInstance.socket.on("init") { (dataArray, socketAck) -> Void in
-//                print("fudgeInit:",dataArray)
-//            }
-//           SocketIOManager.sharedInstance.socket.on("update") { (dataArray, socketAck) -> Void in
-//            print("fudgeUpdate:",dataArray)
-//            }
-//           SocketIOManager.sharedInstance.socket.on("delete") { (dataArray, socketAck) -> Void in
-//            print("fudgeDelete:",dataArray)
-//          }
+            SocketIOManager.sharedInstance.socket.on("data") { (dataArray, socketAck) -> Void in
+                print("Updated array:",dataArray)
+            }
+          
 
     }
 }
