@@ -52,6 +52,7 @@ class MoreOptionsTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
         delTempStatus?.selectedOptions(temperature: (optionsArray?[indexPath.row])!)
     }
 

@@ -40,7 +40,7 @@ internal var popOver:MoreOptionsTableViewController?
    
     @IBAction func btnTapped(_ sender: Any) {
         popOver = MoreOptionsTableViewController()
-        popOver?.delTempStatus = self as? TempStatus
+        popOver?.delTempStatus = self
         popOver?.modalPresentationStyle = UIModalPresentationStyle.popover
         popOver?.optionsArray = self.temperatureStack
         // set up the popover presentation controller
@@ -61,11 +61,10 @@ internal var popOver:MoreOptionsTableViewController?
 }
 
 
-
-
-extension TemperatureViewController{
+extension TemperatureViewController:TempStatus{
     func selectedOptions(temperature:Temperature){
-     print("I am here ,Not an issue")
+         popOver?.popoverPresentationController?.presentingViewController.dismiss(animated: true, completion:nil)
     }
 }
+
 
