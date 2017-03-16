@@ -21,6 +21,7 @@
 		AC8315A91E7AC8640030A9CA /* ServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83159A1E7AC8640030A9CA /* ServerApi.swift */; };
 		AC8315AA1E7AC8640030A9CA /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83159D1E7AC8640030A9CA /* Temperature.swift */; };
 		AC8315AB1E7AC8640030A9CA /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83159E1E7AC8640030A9CA /* TemperatureViewController.swift */; };
+		AC8315B61E7AD2230030A9CA /* MoreOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8315B51E7AD2230030A9CA /* MoreOptionsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		AC83159A1E7AC8640030A9CA /* ServerApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerApi.swift; sourceTree = "<group>"; };
 		AC83159D1E7AC8640030A9CA /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		AC83159E1E7AC8640030A9CA /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		AC8315B51E7AD2230030A9CA /* MoreOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptionsTableViewController.swift; sourceTree = "<group>"; };
 		AF8A87695B374F0FF134A193 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1D6AAE3AA5066F14FB06128 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		AC83159B1E7AC8640030A9CA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AC8315B51E7AD2230030A9CA /* MoreOptionsTableViewController.swift */,
 				AC83159C1E7AC8640030A9CA /* Models */,
 				AC83159E1E7AC8640030A9CA /* TemperatureViewController.swift */,
 			);
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8315A71E7AC8640030A9CA /* DataRetriever.swift in Sources */,
+				AC8315B61E7AD2230030A9CA /* MoreOptionsTableViewController.swift in Sources */,
 				AC8315A81E7AC8640030A9CA /* ParseSerialization.swift in Sources */,
 				AC83159F1E7AC8640030A9CA /* AppDelegate.swift in Sources */,
 				AC8315A91E7AC8640030A9CA /* ServerApi.swift in Sources */,
