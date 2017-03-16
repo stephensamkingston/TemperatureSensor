@@ -8,36 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		76AC14718EB9F4EF7E5023E5 /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F7CAD122C4E4895A2C401E /* Pods_demo.framework */; };
-		AC2590AA1E793EC800EFC43E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2590A91E793EC800EFC43E /* AppDelegate.swift */; };
-		AC2590AF1E793EC800EFC43E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2590AD1E793EC800EFC43E /* Main.storyboard */; };
-		AC2590B11E793EC800EFC43E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2590B01E793EC800EFC43E /* Assets.xcassets */; };
-		AC2590B41E793EC800EFC43E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2590B21E793EC800EFC43E /* LaunchScreen.storyboard */; };
-		AC2590C01E794D0700EFC43E /* ServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2590BF1E794D0700EFC43E /* ServerApi.swift */; };
-		AC2590C31E794D2400EFC43E /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2590C21E794D2400EFC43E /* TemperatureViewController.swift */; };
-		AC2590C51E794DF100EFC43E /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2590C41E794DF100EFC43E /* DataRetriever.swift */; };
-		AC2590C71E794E2D00EFC43E /* ParseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2590C61E794E2D00EFC43E /* ParseSerialization.swift */; };
-		AC2590CA1E794EB800EFC43E /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2590C91E794EB800EFC43E /* Temperature.swift */; };
-		AC2590CE1E7957C400EFC43E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2590CC1E7957C400EFC43E /* Constant.swift */; };
-		AC2590CF1E7957C400EFC43E /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2590CD1E7957C400EFC43E /* SocketIOManager.swift */; };
-		ACAA0CD61E7A9D3400D5C039 /* RoughCode in Resources */ = {isa = PBXBuildFile; fileRef = ACAA0CD51E7A9D3400D5C039 /* RoughCode */; };
+		AC83159F1E7AC8640030A9CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83158C1E7AC8640030A9CA /* AppDelegate.swift */; };
+		AC8315A01E7AC8640030A9CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC83158D1E7AC8640030A9CA /* Assets.xcassets */; };
+		AC8315A11E7AC8640030A9CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC83158E1E7AC8640030A9CA /* LaunchScreen.storyboard */; };
+		AC8315A21E7AC8640030A9CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8315901E7AC8640030A9CA /* Main.storyboard */; };
+		AC8315A31E7AC8640030A9CA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8315931E7AC8640030A9CA /* Constant.swift */; };
+		AC8315A41E7AC8640030A9CA /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8315941E7AC8640030A9CA /* SocketIOManager.swift */; };
+		AC8315A51E7AC8640030A9CA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC8315951E7AC8640030A9CA /* Info.plist */; };
+		AC8315A61E7AC8640030A9CA /* RoughCode in Resources */ = {isa = PBXBuildFile; fileRef = AC8315961E7AC8640030A9CA /* RoughCode */; };
+		AC8315A71E7AC8640030A9CA /* DataRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8315981E7AC8640030A9CA /* DataRetriever.swift */; };
+		AC8315A81E7AC8640030A9CA /* ParseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8315991E7AC8640030A9CA /* ParseSerialization.swift */; };
+		AC8315A91E7AC8640030A9CA /* ServerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83159A1E7AC8640030A9CA /* ServerApi.swift */; };
+		AC8315AA1E7AC8640030A9CA /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83159D1E7AC8640030A9CA /* Temperature.swift */; };
+		AC8315AB1E7AC8640030A9CA /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83159E1E7AC8640030A9CA /* TemperatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		95F7CAD122C4E4895A2C401E /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2590A61E793EC800EFC43E /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC2590A91E793EC800EFC43E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC2590AE1E793EC800EFC43E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC2590B01E793EC800EFC43E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AC2590B31E793EC800EFC43E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AC2590B51E793EC800EFC43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC2590BF1E794D0700EFC43E /* ServerApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerApi.swift; sourceTree = "<group>"; };
-		AC2590C21E794D2400EFC43E /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
-		AC2590C41E794DF100EFC43E /* DataRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
-		AC2590C61E794E2D00EFC43E /* ParseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSerialization.swift; sourceTree = "<group>"; };
-		AC2590C91E794EB800EFC43E /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
-		AC2590CC1E7957C400EFC43E /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		AC2590CD1E7957C400EFC43E /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
-		ACAA0CD51E7A9D3400D5C039 /* RoughCode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RoughCode; sourceTree = "<group>"; };
+		AC83158C1E7AC8640030A9CA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC83158D1E7AC8640030A9CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC83158F1E7AC8640030A9CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC8315911E7AC8640030A9CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC8315931E7AC8640030A9CA /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		AC8315941E7AC8640030A9CA /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		AC8315951E7AC8640030A9CA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC8315961E7AC8640030A9CA /* RoughCode */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RoughCode; sourceTree = "<group>"; };
+		AC8315981E7AC8640030A9CA /* DataRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRetriever.swift; sourceTree = "<group>"; };
+		AC8315991E7AC8640030A9CA /* ParseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSerialization.swift; sourceTree = "<group>"; };
+		AC83159A1E7AC8640030A9CA /* ServerApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerApi.swift; sourceTree = "<group>"; };
+		AC83159D1E7AC8640030A9CA /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		AC83159E1E7AC8640030A9CA /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		AF8A87695B374F0FF134A193 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1D6AAE3AA5066F14FB06128 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +75,7 @@
 		AC25909D1E793EC800EFC43E = {
 			isa = PBXGroup;
 			children = (
-				AC2590A81E793EC800EFC43E /* Demo */,
+				AC83158B1E7AC8640030A9CA /* demo */,
 				AC2590A71E793EC800EFC43E /* Products */,
 				1E72D2B3D5270EA6EDE99848 /* Pods */,
 				22ABC51F9C7C7780BE0EC7C0 /* Frameworks */,
@@ -89,57 +90,56 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC2590A81E793EC800EFC43E /* Demo */ = {
+		AC83158B1E7AC8640030A9CA /* demo */ = {
 			isa = PBXGroup;
 			children = (
-				AC2590CB1E7957C400EFC43E /* CustomClass */,
-				AC2590C11E794D2400EFC43E /* ViewController */,
-				AC2590BE1E794D0700EFC43E /* ServerAPI */,
-				AC2590A91E793EC800EFC43E /* AppDelegate.swift */,
-				AC2590AD1E793EC800EFC43E /* Main.storyboard */,
-				AC2590B01E793EC800EFC43E /* Assets.xcassets */,
-				AC2590B21E793EC800EFC43E /* LaunchScreen.storyboard */,
-				AC2590B51E793EC800EFC43E /* Info.plist */,
-				ACAA0CD51E7A9D3400D5C039 /* RoughCode */,
+				AC83158C1E7AC8640030A9CA /* AppDelegate.swift */,
+				AC83158D1E7AC8640030A9CA /* Assets.xcassets */,
+				AC83158E1E7AC8640030A9CA /* LaunchScreen.storyboard */,
+				AC8315901E7AC8640030A9CA /* Main.storyboard */,
+				AC8315921E7AC8640030A9CA /* CustomClass */,
+				AC8315951E7AC8640030A9CA /* Info.plist */,
+				AC8315961E7AC8640030A9CA /* RoughCode */,
+				AC8315971E7AC8640030A9CA /* ServerAPI */,
+				AC83159B1E7AC8640030A9CA /* ViewController */,
 			);
-			name = Demo;
 			path = demo;
 			sourceTree = "<group>";
 		};
-		AC2590BE1E794D0700EFC43E /* ServerAPI */ = {
+		AC8315921E7AC8640030A9CA /* CustomClass */ = {
 			isa = PBXGroup;
 			children = (
-				AC2590C61E794E2D00EFC43E /* ParseSerialization.swift */,
-				AC2590C41E794DF100EFC43E /* DataRetriever.swift */,
-				AC2590BF1E794D0700EFC43E /* ServerApi.swift */,
+				AC8315931E7AC8640030A9CA /* Constant.swift */,
+				AC8315941E7AC8640030A9CA /* SocketIOManager.swift */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		AC8315971E7AC8640030A9CA /* ServerAPI */ = {
+			isa = PBXGroup;
+			children = (
+				AC8315981E7AC8640030A9CA /* DataRetriever.swift */,
+				AC8315991E7AC8640030A9CA /* ParseSerialization.swift */,
+				AC83159A1E7AC8640030A9CA /* ServerApi.swift */,
 			);
 			path = ServerAPI;
 			sourceTree = "<group>";
 		};
-		AC2590C11E794D2400EFC43E /* ViewController */ = {
+		AC83159B1E7AC8640030A9CA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AC2590C81E794E9F00EFC43E /* Models */,
-				AC2590C21E794D2400EFC43E /* TemperatureViewController.swift */,
+				AC83159C1E7AC8640030A9CA /* Models */,
+				AC83159E1E7AC8640030A9CA /* TemperatureViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		AC2590C81E794E9F00EFC43E /* Models */ = {
+		AC83159C1E7AC8640030A9CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC2590C91E794EB800EFC43E /* Temperature.swift */,
+				AC83159D1E7AC8640030A9CA /* Temperature.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		AC2590CB1E7957C400EFC43E /* CustomClass */ = {
-			isa = PBXGroup;
-			children = (
-				AC2590CC1E7957C400EFC43E /* Constant.swift */,
-				AC2590CD1E7957C400EFC43E /* SocketIOManager.swift */,
-			);
-			path = CustomClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,10 +204,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2590B41E793EC800EFC43E /* LaunchScreen.storyboard in Resources */,
-				ACAA0CD61E7A9D3400D5C039 /* RoughCode in Resources */,
-				AC2590B11E793EC800EFC43E /* Assets.xcassets in Resources */,
-				AC2590AF1E793EC800EFC43E /* Main.storyboard in Resources */,
+				AC8315A51E7AC8640030A9CA /* Info.plist in Resources */,
+				AC8315A21E7AC8640030A9CA /* Main.storyboard in Resources */,
+				AC8315A61E7AC8640030A9CA /* RoughCode in Resources */,
+				AC8315A01E7AC8640030A9CA /* Assets.xcassets in Resources */,
+				AC8315A11E7AC8640030A9CA /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,34 +267,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2590CE1E7957C400EFC43E /* Constant.swift in Sources */,
-				AC2590C71E794E2D00EFC43E /* ParseSerialization.swift in Sources */,
-				AC2590C31E794D2400EFC43E /* TemperatureViewController.swift in Sources */,
-				AC2590AA1E793EC800EFC43E /* AppDelegate.swift in Sources */,
-				AC2590CF1E7957C400EFC43E /* SocketIOManager.swift in Sources */,
-				AC2590C01E794D0700EFC43E /* ServerApi.swift in Sources */,
-				AC2590CA1E794EB800EFC43E /* Temperature.swift in Sources */,
-				AC2590C51E794DF100EFC43E /* DataRetriever.swift in Sources */,
+				AC8315A71E7AC8640030A9CA /* DataRetriever.swift in Sources */,
+				AC8315A81E7AC8640030A9CA /* ParseSerialization.swift in Sources */,
+				AC83159F1E7AC8640030A9CA /* AppDelegate.swift in Sources */,
+				AC8315A91E7AC8640030A9CA /* ServerApi.swift in Sources */,
+				AC8315A41E7AC8640030A9CA /* SocketIOManager.swift in Sources */,
+				AC8315AA1E7AC8640030A9CA /* Temperature.swift in Sources */,
+				AC8315A31E7AC8640030A9CA /* Constant.swift in Sources */,
+				AC8315AB1E7AC8640030A9CA /* TemperatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AC2590AD1E793EC800EFC43E /* Main.storyboard */ = {
+		AC83158E1E7AC8640030A9CA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AC2590AE1E793EC800EFC43E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AC2590B21E793EC800EFC43E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC2590B31E793EC800EFC43E /* Base */,
+				AC83158F1E7AC8640030A9CA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AC8315901E7AC8640030A9CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC8315911E7AC8640030A9CA /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
