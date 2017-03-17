@@ -12,7 +12,7 @@ import SocketIO
 class SocketIOManager: NSObject {
     static let sharedInstance = SocketIOManager()
     
-    let socket = SocketIOClient(socketURL: URL(string: url)!, config: [.log(true), .forcePolling(true)])
+    let socket = SocketIOClient(socketURL: URL(string: url)!, config: [.log(false), .forcePolling(true)])
     
     
     override init() {

@@ -67,9 +67,7 @@ extension TemperatureViewController:TempStatus{
             SocketIOManager.sharedInstance.socket.on("data") { (dataArray, socketAck) -> Void in
                 print("Updated array:",dataArray)
             }
-          
-
+        }
     }
-}
 
 

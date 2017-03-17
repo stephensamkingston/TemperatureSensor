@@ -1,12 +1,15 @@
 PODS:
+  - CorePlot (2.2)
   - Socket.IO-Client-Swift (8.3.0)
 
 DEPENDENCIES:
+  - CorePlot
   - Socket.IO-Client-Swift (~> 8.3.0)
 
 SPEC CHECKSUMS:
+  CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
   Socket.IO-Client-Swift: 7ad3aded3c0f74d99555e950ac3aa82ca3eefbaf
 
-PODFILE CHECKSUM: 25cbdd685053f95eabc74b06d6796000414f6031
+PODFILE CHECKSUM: a69532aa05e9e1c7a63bd7742a74d39fc813e0a8
 
 COCOAPODS: 1.1.1
