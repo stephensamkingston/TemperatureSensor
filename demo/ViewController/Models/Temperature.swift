@@ -21,9 +21,9 @@ class Temperature: NSObject {
         guard let scale = reading.scale else{
             return
         }
-        if scale == "recent"{
+        if scale == .recent{
             self.historyOfSecondReadings.append(reading)
-        }else if scale == "minute"{
+        }else if scale == .minute{
             self.historyOfMinuteReadings.append(reading)
         }else{
             print("\(#function): ERROR: Unidentified Scale")

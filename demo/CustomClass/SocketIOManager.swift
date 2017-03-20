@@ -48,26 +48,22 @@ class SocketIOManager: NSObject {
                     switch type{
                     case "init":
                         
-                        if let arrayOfMinuteReadings = responseDict["minute"] as? NSArray{
-                            for readingDict in arrayOfMinuteReadings{
-                                if let readingConvertedDict = readingDict as? [String:Any]{
-                                    if let reading = TemperatureReading(dictionary: readingConvertedDict){
-                                        reading.sensor = sensorID
-                                        reading.scale = "minute"
-                                        SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
-                                    }
+                        if let arrayOfMinuteReadings = responseDict["minute"] as? [[String:Any]]{
+                            arrayOfMinuteReadings.forEach{ readingDict in
+                                if let reading = TemperatureReading(dictionary: readingDict,
+                                                                    scale: .minute,
+                                                                    sensorID: sensorID) {
+                                    SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
                                 }
                             }
                         }
                         
-                        if let arrayOfRecentReadings = responseDict["recent"] as? NSArray{
-                            for readingDict in arrayOfRecentReadings{
-                                if let readingConvertedDict = readingDict as? [String:Any]{
-                                    if let reading = TemperatureReading(dictionary: readingConvertedDict){
-                                        reading.sensor = sensorID
-                                        reading.scale = "recent"
-                                        SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
-                                    }
+                        if let arrayOfMinuteReadings = responseDict["recent"] as? [[String:Any]]{
+                            arrayOfMinuteReadings.forEach{ readingDict in
+                                if let reading = TemperatureReading(dictionary: readingDict,
+                                                                    scale: .recent,
+                                                                    sensorID: sensorID) {
+                                    SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
                                 }
                             }
                         }
