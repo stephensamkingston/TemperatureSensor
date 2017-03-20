@@ -64,19 +64,19 @@ internal var popOver:MoreOptionsTableViewController?
 
 extension TemperatureViewController:TempStatus{
     func selectedOptions(temperature:Temperature){
-        
         popOver?.popoverPresentationController?.presentingViewController.dismiss(animated: true, completion:nil)
-        
-        SocketIOManager.sharedInstance.socket.emit("subscribe", temperature.sensorId);
-        
-            SocketIOManager.sharedInstance.socket.on("data") { (dataArray, socketAck) -> Void in
-                
-            SocketIOManager.sharedInstance.receiveSocketItems(dataArray: dataArray as! [[String : Any]],
-                                                              sensorID: temperature.sensorId)
-                
-                print("Updated array:",dataArray)
-            }
+        self.loadGraphController(sensor: temperature)
+    }
+
+    //MARK:- Loading Graph Controller
+    func loadGraphController(sensor:Temperature){
+        let storyBoard = UIStoryboard.init(name: "GraphController", bundle: Bundle.main)
+        if let vc = storyBoard.instantiateViewController(withIdentifier: "graphvc") as? GraphViewController{
+            vc.sensor = sensor
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
+    
+}
 
 

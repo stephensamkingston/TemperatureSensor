@@ -24,6 +24,8 @@
 		AC8315B61E7AD2230030A9CA /* MoreOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8315B51E7AD2230030A9CA /* MoreOptionsTableViewController.swift */; };
 		AC97B7B31E7BC9B0009F848A /* TemperatureReadings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97B7B21E7BC9B0009F848A /* TemperatureReadings.swift */; };
 		AC97B7B51E7BD55D009F848A /* SensorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97B7B41E7BD55D009F848A /* SensorManager.swift */; };
+		E10EDEDA1E7FE68700903463 /* GraphController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10EDED91E7FE68700903463 /* GraphController.storyboard */; };
+		E10EDEDC1E7FE6AC00903463 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10EDEDB1E7FE6AC00903463 /* GraphViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		AC97B7B41E7BD55D009F848A /* SensorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorManager.swift; sourceTree = "<group>"; };
 		AF8A87695B374F0FF134A193 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1D6AAE3AA5066F14FB06128 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
+		E10EDED91E7FE68700903463 /* GraphController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GraphController.storyboard; sourceTree = "<group>"; };
+		E10EDEDB1E7FE6AC00903463 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		AC83158B1E7AC8640030A9CA /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				E10EDED81E7FE67400903463 /* Graphs */,
 				AC83158C1E7AC8640030A9CA /* AppDelegate.swift */,
 				AC83158D1E7AC8640030A9CA /* Assets.xcassets */,
 				AC83158E1E7AC8640030A9CA /* LaunchScreen.storyboard */,
@@ -149,6 +154,15 @@
 				AC97B7B41E7BD55D009F848A /* SensorManager.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E10EDED81E7FE67400903463 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				E10EDED91E7FE68700903463 /* GraphController.storyboard */,
+				E10EDEDB1E7FE6AC00903463 /* GraphViewController.swift */,
+			);
+			name = Graphs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +230,7 @@
 				AC8315A51E7AC8640030A9CA /* Info.plist in Resources */,
 				AC8315A21E7AC8640030A9CA /* Main.storyboard in Resources */,
 				AC8315A61E7AC8640030A9CA /* RoughCode in Resources */,
+				E10EDEDA1E7FE68700903463 /* GraphController.storyboard in Resources */,
 				AC8315A01E7AC8640030A9CA /* Assets.xcassets in Resources */,
 				AC8315A11E7AC8640030A9CA /* LaunchScreen.storyboard in Resources */,
 			);
@@ -285,6 +300,7 @@
 				AC8315A91E7AC8640030A9CA /* ServerApi.swift in Sources */,
 				AC8315A41E7AC8640030A9CA /* SocketIOManager.swift in Sources */,
 				AC8315AA1E7AC8640030A9CA /* Temperature.swift in Sources */,
+				E10EDEDC1E7FE6AC00903463 /* GraphViewController.swift in Sources */,
 				AC8315A31E7AC8640030A9CA /* Constant.swift in Sources */,
 				AC8315AB1E7AC8640030A9CA /* TemperatureViewController.swift in Sources */,
 			);
