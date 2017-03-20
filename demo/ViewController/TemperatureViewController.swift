@@ -71,7 +71,8 @@ extension TemperatureViewController:TempStatus{
         
             SocketIOManager.sharedInstance.socket.on("data") { (dataArray, socketAck) -> Void in
                 
-            SocketIOManager.sharedInstance.receiveSocketItems(dataArray: dataArray as! [[String : Any]])
+            SocketIOManager.sharedInstance.receiveSocketItems(dataArray: dataArray as! [[String : Any]],
+                                                              sensorID: temperature.sensorId)
                 
                 print("Updated array:",dataArray)
             }

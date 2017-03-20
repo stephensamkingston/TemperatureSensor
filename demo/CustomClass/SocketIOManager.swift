@@ -41,7 +41,7 @@ class SocketIOManager: NSObject {
     }
     
    
-    func receiveSocketItems(dataArray:[[String:Any]]){
+    func receiveSocketItems(dataArray:[[String:Any]],sensorID:String?){
        
             for responseDict in dataArray{
                 if let type = responseDict["type"] as? String{
@@ -50,28 +50,30 @@ class SocketIOManager: NSObject {
                         
                         if let arrayOfMinuteReadings = responseDict["minute"] as? NSArray{
                             for readingDict in arrayOfMinuteReadings{
-                                let allKeys = (readingDict as! NSDictionary).allKeys
-                                
-                                
-                                let value = (readingDict as! NSDictionary).value(forKey: allKeys[1] as! String) as! NSNumber
-                                let key = (readingDict as! NSDictionary).value(forKey: allKeys[0] as! String) as! NSNumber
-                                
-                                if let reading = TemperatureReading(dictionary: ["\(key)": "\(value)"]){
-                                    SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
+                                if let readingConvertedDict = readingDict as? [String:Any]{
+                                    if let reading = TemperatureReading(dictionary: readingConvertedDict){
+                                        reading.sensor = sensorID
+                                        reading.scale = "minute"
+                                        SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
+                                    }
                                 }
                             }
                         }
                         
                         if let arrayOfRecentReadings = responseDict["recent"] as? NSArray{
                             for readingDict in arrayOfRecentReadings{
-                                if let reading = TemperatureReading(dictionary: readingDict as! [String : String]){
-                                    SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
+                                if let readingConvertedDict = readingDict as? [String:Any]{
+                                    if let reading = TemperatureReading(dictionary: readingConvertedDict){
+                                        reading.sensor = sensorID
+                                        reading.scale = "recent"
+                                        SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
+                                    }
                                 }
                             }
                         }
                         break
                     case "update":
-                        if let readingDict = responseDict as? [String : String],
+                        if let readingDict = responseDict as? [String : Any],
                             let reading = TemperatureReading(dictionary: readingDict){
                             SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
                         }
