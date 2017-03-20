@@ -45,7 +45,7 @@ class MoreOptionsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
        cell.backgroundColor =  UIColor.black
-       cell.textLabel?.text = optionsArray?[indexPath.row].temperature
+       cell.textLabel?.text = optionsArray?[indexPath.row].sensorId
        cell.textLabel?.textColor = UIColor.white
        return cell
     }

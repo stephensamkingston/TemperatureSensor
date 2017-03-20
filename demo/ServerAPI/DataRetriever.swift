@@ -33,10 +33,11 @@ class DataRetriever:NSObject {
                             for temperature in TemperatureResults{
                                 if let minMax = TemperatureConfigResults[temperature] as? [String:AnyObject]{
                                     let tempObj = Temperature()
-                                    tempObj.temperature = temperature
+                                    tempObj.sensorId = temperature
                                     tempObj.min = minMax["max"] as? String
                                     tempObj.min = minMax["min"] as? String
                                     tempArray.append(tempObj)
+                                    
                                 }
                               }
                               completion(tempArray)

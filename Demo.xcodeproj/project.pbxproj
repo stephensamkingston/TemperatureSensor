@@ -23,6 +23,7 @@
 		AC8315AB1E7AC8640030A9CA /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC83159E1E7AC8640030A9CA /* TemperatureViewController.swift */; };
 		AC8315B61E7AD2230030A9CA /* MoreOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8315B51E7AD2230030A9CA /* MoreOptionsTableViewController.swift */; };
 		AC97B7B31E7BC9B0009F848A /* TemperatureReadings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97B7B21E7BC9B0009F848A /* TemperatureReadings.swift */; };
+		AC97B7B51E7BD55D009F848A /* SensorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC97B7B41E7BD55D009F848A /* SensorManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		AC83159E1E7AC8640030A9CA /* TemperatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		AC8315B51E7AD2230030A9CA /* MoreOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreOptionsTableViewController.swift; sourceTree = "<group>"; };
 		AC97B7B21E7BC9B0009F848A /* TemperatureReadings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureReadings.swift; sourceTree = "<group>"; };
+		AC97B7B41E7BD55D009F848A /* SensorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorManager.swift; sourceTree = "<group>"; };
 		AF8A87695B374F0FF134A193 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1D6AAE3AA5066F14FB06128 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				AC83159D1E7AC8640030A9CA /* Temperature.swift */,
+				AC97B7B41E7BD55D009F848A /* SensorManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				AC8315B61E7AD2230030A9CA /* MoreOptionsTableViewController.swift in Sources */,
 				AC8315A81E7AC8640030A9CA /* ParseSerialization.swift in Sources */,
 				AC83159F1E7AC8640030A9CA /* AppDelegate.swift in Sources */,
+				AC97B7B51E7BD55D009F848A /* SensorManager.swift in Sources */,
 				AC8315A91E7AC8640030A9CA /* ServerApi.swift in Sources */,
 				AC8315A41E7AC8640030A9CA /* SocketIOManager.swift in Sources */,
 				AC8315AA1E7AC8640030A9CA /* Temperature.swift in Sources */,

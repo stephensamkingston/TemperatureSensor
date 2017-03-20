@@ -28,6 +28,9 @@ internal var popOver:MoreOptionsTableViewController?
           DispatchQueue.main.async {
               print(temperature)
             self.temperatureStack = temperature
+            
+            SensorManager.instance.arrayOfSensors = temperature
+            
             }
           }
         }
@@ -61,10 +64,15 @@ internal var popOver:MoreOptionsTableViewController?
 
 extension TemperatureViewController:TempStatus{
     func selectedOptions(temperature:Temperature){
-         popOver?.popoverPresentationController?.presentingViewController.dismiss(animated: true, completion:nil)
-        SocketIOManager.sharedInstance.socket.emit("subscribe", temperature.temperature!);
+        
+        popOver?.popoverPresentationController?.presentingViewController.dismiss(animated: true, completion:nil)
+        
+        SocketIOManager.sharedInstance.socket.emit("subscribe", temperature.sensorId);
         
             SocketIOManager.sharedInstance.socket.on("data") { (dataArray, socketAck) -> Void in
+                
+            SocketIOManager.sharedInstance.receiveSocketItems(dataArray: dataArray as! [[String : Any]])
+                
                 print("Updated array:",dataArray)
             }
         }

@@ -41,21 +41,50 @@ class SocketIOManager: NSObject {
     }
     
    
-    
-      func listenForOtherMessages() {
-        socket.on("Init") { (dataArray, socketAck) -> Void in
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "userWasConnectedNotification"), object: dataArray[0] as! [String: AnyObject])
-        }
-        
-        socket.on("Update") { (dataArray, socketAck) -> Void in
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "userWasDisconnectedNotification"), object: dataArray[0] as! String)
-        }
-        
-        socket.on("delete") { (dataArray, socketAck) -> Void in
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "userTypingNotification"), object: dataArray[0] as? [String: AnyObject])
-        }
+    func receiveSocketItems(dataArray:[[String:Any]]){
+       
+            for responseDict in dataArray{
+                if let type = responseDict["type"] as? String{
+                    switch type{
+                    case "init":
+                        
+                        if let arrayOfMinuteReadings = responseDict["minute"] as? NSArray{
+                            for readingDict in arrayOfMinuteReadings{
+                                let allKeys = (readingDict as! NSDictionary).allKeys
+                                
+                                
+                                let value = (readingDict as! NSDictionary).value(forKey: allKeys[1] as! String) as! NSNumber
+                                let key = (readingDict as! NSDictionary).value(forKey: allKeys[0] as! String) as! NSNumber
+                                
+                                if let reading = TemperatureReading(dictionary: ["\(key)": "\(value)"]){
+                                    SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
+                                }
+                            }
+                        }
+                        
+                        if let arrayOfRecentReadings = responseDict["recent"] as? NSArray{
+                            for readingDict in arrayOfRecentReadings{
+                                if let reading = TemperatureReading(dictionary: readingDict as! [String : String]){
+                                    SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
+                                }
+                            }
+                        }
+                        break
+                    case "update":
+                        if let readingDict = responseDict as? [String : String],
+                            let reading = TemperatureReading(dictionary: readingDict){
+                            SensorManager.instance.temperatureObjectWithId(idString: reading.sensor!)?.recievedReading(reading: reading)
+                        }
+                        break
+                    case "delete":
+                        break
+                    default:
+                        print("\(#function): Unidentified Type")
+                    }
+                }
+            }
     }
-    
+   
     
     func sendStartTypingMessage(_ nickname: String) {
         socket.emit("startType", nickname)
